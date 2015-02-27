@@ -1,0 +1,362 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define PI 3.14159265
+main(){
+       float num1,num2,total,n;
+       char opcao;
+       do{
+             system("color 0B");
+             printf("\t\t#===========================================#\n");
+             printf("\n\t\t\t\t__CALCULADORA__\n");
+             printf("\n\t\t#===========================================#\n");
+             printf("\n\n\t\t*Digite o codigo correspondente a uma das operacoes abaixo:");
+             printf("\n\n\t>(+) para adicao");           
+             printf("\n\t>(-) para subtracao");             
+             printf("\n\t>(x) para multiplicacao");           
+             printf("\n\t>(/) para divisao");            
+             printf("\n\t>(%%) para porcentagem");   
+             printf("\n\t>(P) para potenciacao");           
+             printf("\n\t>(R) para radiciacao");                      
+             printf("\n\t>(F) para fatorial");             
+             printf("\n\t>(N) para seno");
+             printf("\n\t>(O) para cosseno");
+             printf("\n\t>(S) para sair");
+             printf("\n\n\t>>> ");
+             scanf("%c", &opcao);
+             switch(opcao){
+                           case '+':
+                                do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu SOMA:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tPrimeira parcela: ");
+                                    scanf("%f", &num1);
+                                    if (num1!=-0){
+                                        printf("\n\n\t\tSegunda parcela: ");
+                                        scanf("%f", &num2);
+                                        total = num1+num2;
+                                        system("cls");
+                                        printf("\t\t*RESULTADO*");
+                                        printf("\n\n\t%.2f + %.2f = %.2f", num1, num2, total);
+                                        getch();
+                                        }
+                                      else{
+                                           system("cls");
+                                           printf("Sair SOMA?");
+                                           getch();
+                                           }
+                                   }while(num1!=-0);
+                                   break;
+                           case '-':
+                                 do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu SOMA:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tPrimeira parcela: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                  printf("\n\n\t\tSegunda parcela: ");
+                                                  scanf("%f", &num2);
+                                                  total = num1-num2;
+                                                  system("cls");
+                                                  printf("\t\t*RESULTADO*");
+                                                  printf("\n\n\t%.2f - %.2f = %.2f", num1, num2, total);
+                                                  getch();
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("Sair SUBTRACAO?");
+                                         getch();
+                                         }
+                                     }while(num1!=-0);
+                                     break;
+                           case 'x':
+                           case 'X':
+                                do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu MULTIPLICACAO:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tPrimeiro numero: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                  printf("\n\n\t\tSegundo numero: ");
+                                                  scanf("%f", &num2);
+                                                  total = num1*num2;
+                                                  system("cls");
+                                                  printf("\t\t*RESULTADO*");
+                                                  printf("\n\n\t%.2f x %.2f = %.2f", num1, num2, total);
+                                                  getch();                                                
+                                                }
+                                    else{
+                                         system("cls");
+                                         printf("\t\t\tSair MULTIPLICACAO?");
+                                         getch();
+                                         }                                    
+                                    }while(num1!=-0);
+                                    break;
+                           case '/':
+                                do{
+                                    system("cls");
+                                   printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu DIVISAO:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tPrimeiro numero: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                  printf("\n\n\t\tSegundo numero: ");
+                                                  scanf("%f", &num2);
+                                                  if(num2!=0){
+                                                              total = num1/num2;
+                                                              system("cls");
+                                                              printf("\t\t*RESULTADO*");
+                                                              printf("\n\n\t%.2f : %.2f = %.2f", num1, num2, total);
+                                                              getch();
+                                                              }
+                                                  else{
+                                                       system("cls");
+                                                       printf("\t\tRESULTADO");
+                                                       printf("\n\n\tNao existe divisao por zero!");
+                                                       getch();
+                                                       }
+                                                }
+                                    else{
+                                         system("cls");
+                                         printf("\t\t\tSair da DIVISAO?");
+                                         getch();
+                                         } 
+                                    }while(num1!=-0);
+                                    break;
+                           case 'p':
+                           case'P':
+                                do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu POTENCIACAO\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tDigite o numero: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                 printf("\n\n\t\tDigite o indice: ");
+                                                 scanf("%f", &n);
+                                                 total = pow(num1,n);
+                                                 system("cls");
+                                                 printf("\t\t*RESULTADO*");
+                                                 printf("\n\n\t%.2f elevado a %.f vale %.2f", num1,n,total);
+                                                 getch();
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("\t\t\tSair POTENCIACAO?");
+                                         getch();                                         
+                                         }
+                                    }while(num1!=-0);
+                                    break;
+                           case 'r':
+                           case 'R':
+                                do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu RADICIACAO:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tDigite um numero: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                 if(num1>=0){
+                                                             printf("\n\n\t\tDigite o indice: ");
+                                                             scanf("%f", &n);
+                                                             total = pow(num1,1/n);
+                                                             if(n<0){
+                                                                     system("cls");
+                                                                     printf("\aERRO:");
+                                                                     printf("\nNao existe raiz com indice negativo!");
+                                                                     getch();
+                                                                     }
+                                                             else{
+                                                                  system("cls");
+                                                                  printf("\t\t*RESULTADO");
+                                                                  printf("\n\n\tA raiz %.2f de %.2f vale %.2f.",n,num1,total);
+                                                                  getch();
+                                                                  }
+                                                             }
+                                                 else{
+                                                      system("cls");
+                                                      printf("\aERRO:");
+                                                      printf("\n\nNao existe raiz de numero negativo.");
+                                                      getch();
+                                                      }
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("\t\tSair RADICIACAO?");
+                                         getch();
+                                         }
+                                    }while(num1!=-0);
+                                    break;
+                           case '%':
+                                do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu PORCENTAGEM:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tDigite um numero: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                 printf("\n\n\t\tDigite a porcentagem: ");
+                                                 scanf("%f", &n);
+                                                 if(n>=0){
+                                                          total = (num1*n)/100;
+                                                          system("cls");
+                                                          printf("\t\tRESULTADO:");
+                                                          printf("\n\n\t%.2f por cento de %.2f vale %.2f", n,num1,total);
+                                                          getch();                                                          
+                                                          }
+                                                 else{
+                                                      system("cls");
+                                                      printf("\aERRO:");
+                                                      printf("\n\nNao existe porcentagem negativa!");
+                                                      getch();
+                                                      }
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("Sair PORCENTAGEM?");
+                                         getch();                                         
+                                         }
+                                    }while(num1!=-0);
+                                    break;
+                           case'f':
+                           case'F':
+                                  do{
+                                   system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu FATORIAL:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                   printf("\n\n\t\tDigite um numero inteiro: ");
+                                   scanf("%f", &num1);
+                                   if(num1!=-0){
+                                                  if(num1>=0)
+                                                {  
+                                                  total=1;
+                                                  n=num1;
+                                                    while(n>0)
+                                                  { 
+                                                     total*=n;//total=total*n
+                                                     n--;
+                                                      }
+                                                       printf("\t\t%.2f!=%.2f\n",num1,total); 
+                                                       getch();
+                                                       
+                                                       }
+                                                         else{
+                                                    system("cls");
+                                                      printf("\aERRO:");
+                                                      printf("\n\nNao existe fatorial de numero negativo!");
+                                                      getch();
+                                                    
+                                                       }
+                                                  }
+                                              
+                                              else{
+                                         system("cls");
+                                         printf("Sair FATORIAL?");
+                                         getch();                                         
+                                         }
+                                         
+                                               }while(num1!=-0);
+                                                break;  
+                                                
+                           case 'n':
+                           case 'N':
+                                do{
+                                    system("cls");
+                                     printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu SENO:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tDigite o angulo em graus: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                 if(num1>0)
+                                                 {
+                                                 total=sin(num1*PI/180);                                                          
+                                                         
+                                                         printf("\t\nO seno de %f = %f\n", num1, total);
+                                                          getch();
+                                                          }
+                                                 else{
+                                                      system("cls");
+                                                      printf("\aERRO:");
+                                                      printf("\n\nNao existe angulo negativo!");
+                                                      getch();
+                                                      }
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("Sair SENO?");
+                                         getch();                                         
+                                         }
+                                    }while(num1!=-0);
+                                    break;
+                                   
+                         case 'O':
+                         case 'o':
+                               do{
+                                    system("cls");
+                                    printf("\t\t#===========================================#\n");
+                                    printf("\n\t\t\t\tVoce escolheu COSSENO:\n");
+                                    printf("\n\t\t#===========================================#\n");
+                                    printf("\n\n\t\tDigite -0 para sair");
+                                    printf("\n\n\t\tDigite o angulo em graus: ");
+                                    scanf("%f", &num1);
+                                    if(num1!=-0){
+                                                 if(num1>0)
+                                                 {
+                                                 total=cos(num1*PI/180);                                                          
+                                                         
+                                                         printf("\n\tO cosseno de %f = %f\n", num1, total);
+                                                         getch();
+                                                 }
+                                                 else{
+                                                      system("cls");
+                                                      printf("\aERRO:");
+                                                      printf("\n\nNao existe angulo negativo!");
+                                                      getch();
+                                                      }
+                                                 }
+                                    else{
+                                         system("cls");
+                                         printf("Sair COSSENO?");
+                                         getch();                                         
+                                         }
+                                    }while(num1!=-0);
+                                    break;
+                                                                      
+                           case 's':
+                           case 'S':
+                                system("cls");
+                                printf("\t\tPressione ENTER para sair da calculadora!");
+                                getch();
+                                break;
+                                default:
+                                        system("cls");
+                                        printf("\aERRO:");
+                                        printf("\n\nOpcao Invalida!");
+                                        getch();
+                                   
+                           }
+                           fflush(stdin);
+                           system("cls");
+             }while(opcao!='s'&&opcao!='S');
+       }
